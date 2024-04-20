@@ -8,14 +8,14 @@
 }
 
 ::-webkit-scrollbar {
-    background: transparent;
+    background: #525252bb;
+    display: block;
     width: 12px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: rgb(120, 120, 120);
     border-radius: 12px;
-    
 }
 
 :root {
@@ -38,13 +38,6 @@ body {
     overflow-x: hidden;
 }
 
-.dark {
-    color: var(--fgColorDark2);
-}
-
-.bright {
-    color: var(--fgColorBright1);
-}
 
 /*****Bilder Vorschau******/
 .img-preview {
@@ -76,7 +69,7 @@ body {
     max-height: 90%;
 }
 
-/*Navigationsbalken Oben*/
+/*Navigationsbalken*/
 .navbar {
     background: var(--navbarBgColor);
     color: var(--fgColorDark2);
@@ -84,38 +77,32 @@ body {
 }
 
 .navbar > .content {
-    width: 90%;
-    margin: auto;
+    padding: 10px 0;
 }
 
-.navbar .logo {
+.navbar > .content > li {
     display: inline-block;
     vertical-align: middle;
-    padding: 8px;
-    box-sizing: border-box;
-    font-size: 16pt;
+    margin: 0 32px;
 }
 
-.navbar-links {
-    display: inline-block;
-    float: right;
+.navbar > .content > .logo {
+
 }
 
-.navbar-links > li {
-    display: inline-block;
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 14px;
+.navbar > .content > .item {
+    margin: 0 32px;
+    padding: 6px;
 }
 
-.navbar-links > li > a {
+.navbar > .content > .item > .link {
     text-decoration: none;
     color: var(--foregroundColor);
     border-bottom: 2px solid transparent;
     transition: color 300ms ease-in-out, border 300ms ease-in-out;
 }
 
-.navbar-links > li > a:hover {
+.navbar > .content > .item > .link:hover {
     color: #fff;
     border-bottom: 2px solid #fff;
 }
@@ -127,55 +114,58 @@ body {
     background: var(--bgColorDark);
 }
 
-.banner > .banner {
+.banner > .banner-bg {
     width: 100%;
-    filter: brightness(.7);
+    filter: brightness(.5);
 }
 
 .banner > .banner-header {
-    background: #35353594;
-    padding: 6px;
-    box-sizing: border-box;
-    letter-spacing: .075em;
-    backdrop-filter: blur(6px);
-    display: inline-block;
+    padding: 12px;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 64px;
+    top: 64px;
+    left: 50%;
+    transform: translate(-50%);
     max-width: 50%;
-    max-height: 70%;
     color: var(--fgColorDark2);
-    box-shadow: 2px 2px 4px #4e4e4e;
+    text-align: center;
 }
 
 .banner-header > .title {
-    margin-bottom: 8px;
-    border-bottom: 2px solid;
-    font-size: 18pt;
-    color: #fff;
-}
-
-.banner-header > .content {
-    font-size: 14pt;
-    padding: 6px;
-    box-sizing: border-box;
-}
-
-.banner-header > .content > .buchenBtn {
-    text-decoration: none;
-    color: #ddc030;
-    border-bottom: 2px solid;
     padding: 2px;
+    font-size: 28pt;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.banner > .banner-header > .content {
+    padding: 6px;
+    margin-bottom: 100px;
+    font-size: 14pt;
+    letter-spacing: .1em;
+}
+
+.banner-header > .buchenBtn {
+    text-decoration: none;
+    background: #ddc030;
+    color: #fff;
+    border-radius: 32px;
+    padding: 10px 14px;
     margin: 6px;
-    text-wrap: nowrap;
+    letter-spacing: .15em;
+    transition: 350ms background ease-in-out, 350ms letter-spacing ease-in-out;
+}
+
+.banner-header > .buchenBtn:hover {
+    background: #b59d26;
+    letter-spacing: .2em;
 }
 
 
 
 
+/*Templates*/
 
-/*Layout*/
+/*Articles, Abschnitte*/
 article > .header {
     text-align: center;
 }
@@ -190,14 +180,12 @@ article > .header > .title {
 
 article > .content {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     padding: 32px 0;
-    box-sizing: border-box;
-    background: red;
 }
 
 /*Bright*/
-main article {
+article {
     background: var(--bgColorBright);
 }
 
@@ -206,19 +194,14 @@ main article {
 }
 
 /*Dark*/
-main article:nth-child(2n) {
+article:nth-child(2n) {
     background: var(--bgColorDark);
     color: var(--fgColorDark2);
 }
 
-main article:nth-child(2n) .header .title {
+article:nth-child(2n) .header .title {
     color: var(--fgColorDark1);
 }
-
-
-
-
-
 
 
 /*******Information, Geschichte Artikel******/
@@ -234,8 +217,6 @@ main article:nth-child(2n) .header .title {
     padding: 4px;
     box-sizing: border-box;
 }
-
-
 
 
 /*****Gallerie Artikel, Bilder Mueseum*******/
@@ -257,15 +238,24 @@ main article:nth-child(2n) .header .title {
 }
 
 
-
-
-
 /*****Preise Artikel, Kosten, Flug, Hotels********/
 .pricing > .content {
-    padding: 32px;
     display: flex;
-    justify-content: space-around;
     position: relative;
+    justify-content: space-around;
+}
+
+.pricing > .content > section {
+    margin: 0 4px;
+    padding: 10px;
+}
+
+.pricing > .content > section > .header {
+    font-size: 16pt;
+    margin-bottom: 12px;
+    border-bottom: 2px solid;
+    color: var(--fgColorDark1);
+    padding-bottom: 4px;
 }
 
 .pricing .total {
@@ -281,26 +271,15 @@ main article:nth-child(2n) .header .title {
 
 .pricing .total .mehrwert {
     color: var(--fgColorDark2);
-    font-size: 10px;
-}
-
-.flight-section {
-    padding: 0 12px;
-}
-
-.flight-section > .header {
-    margin-bottom: 12px;
-    border-bottom: 2px solid;
-    font-size: 20px;
-    color: var(--fgColorDark1);
+    font-size: 8pt;
 }
 
 .flight-section > .flight  {
-    margin: 14px 0;
+    margin-bottom: 12px;
 }
 
 .flight > .title {
-    padding: 4px 0;
+    padding-bottom: 4px;
 }
 
 .flight > input {
@@ -321,36 +300,19 @@ main article:nth-child(2n) .header .title {
     border: 3px solid #20efef;
 }
 
-.inklusive-section > .header {
-    font-size: 20px;
-    margin-bottom: 12px;
-    border-bottom: 2px solid;
-    color: var(--fgColorDark1);
-}
-
 .inklusive-section > .content {
-    padding: 6px;
-    box-sizing: border-box;
     display: flex;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
 }
 
 .inklusive-section > .content > div {
     margin: 0 6px;
-    display: inline-block;
     width: 50%;
 }
 
 .inklusive-section > .content > .description {
-    padding: 12px;
-    font-size: 14px;
-}
-
-.inklusive-section > .content > .gallery {
-}
-
-.inklusive-section > .content > .gallery > ul {
-    padding: 4px;
+    padding: 0 8px;
+    font-size: 11pt;
 }
 
 .hotel-item {
@@ -367,21 +329,13 @@ main article:nth-child(2n) .header .title {
 }
 
 
-
-
 /*******Forumlar, Anmeldung*********/
-.formular {}
-
-.formular > .content {
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 32px;
-    padding-bottom: 12px;
+.formular > .content > form > section {
+    margin: 16px 0;
 }
 
-.formular > .content > form > div {
-    margin: 16px 0;
-    padding: 0 12px;
+.formular > .content > form > section > .header {
+    margin-bottom: 6px;
 }
 
 form input {
@@ -392,6 +346,7 @@ form input {
     padding: 6px;
     border-radius: 6px;
     transition: border 300ms ease-in-out;
+    margin: 0 12px;
 }
 
 form input:focus {
@@ -399,11 +354,11 @@ form input:focus {
 }
 
 form .plz {
-    width: 50px;
+    width: 45px;
 }
 
 form .phone {
-    width: 75px;
+    width: 80px;
     display: inline-block;
 }
 
@@ -412,19 +367,30 @@ form > .submit {
 }
 
 form label {
-    font-size: 14px;
+    font-size: 10pt;
     color: #4e4e4e;
 }
 
 form button {
     outline: none;
     border: none;
-    background: #ddc030;
-    color: #fbfbfb;
+    background: #cecece;
+    color: #575757;
     padding: 14px;
     cursor: pointer;
     border-radius: 6px;
+    font-size: 14pt;
     margin-top: 48px;
+    transition: 200ms background ease-in-out, 200ms color ease-in-out;
+}
+
+form button:hover {
+    background: #ddc030;
+    color: #fbfbfb;
+}
+
+form .agb {
+    font-size: 12pt;
 }
 
 .impressum > .content {
@@ -439,7 +405,6 @@ form button {
     padding: 12px;
 }
 
-
 /*1200*/
 @media screen and (max-width: 1200px) {
 
@@ -453,41 +418,49 @@ form button {
         background: green;
     }
 
-    .navbar .logo {
-        font-size: 11pt;
+    .navbar > .content > li {
+        display: block;
+        text-align: center;
+        vertical-align: middle;
     }
 
-    .navbar-links {
-
-    }
-
-    .navbar-links > li {
+    .navbar > .content > .logo {
         font-size: 12pt;
-        padding: 6px;
-
-        margin: 14px 8px;
     }
 
-    /*Banner*/
+    .navbar > .content > .item {
+        margin: 4px 0;
+        font-size: 14pt;
+    }
+
+    /*banner*/
     .banner > .banner-header {
+        padding: 4px;
+        margin: 0;
         position: absolute;
-        top: 0;
-        left: 0;
-        margin: 28px;
-        letter-spacing: .02em;
+        top: 24px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 70%;
+        color: var(--fgColorDark2);
     }
 
     .banner-header > .title {
-        font-size: 15pt;
-        margin-bottom: 4px;
-    }
-    
-    .banner-header > .content {
-        font-size: 11pt;
-        padding: 4px;
-        margin: 0;
+        font-size: 17pt;
+        margin-bottom: 2px;
     }
 
+    .banner > .banner-header > .content {
+        padding: 6px;
+        margin-bottom: 24px;
+        font-size: 12pt;
+        letter-spacing: .025em;
+    }
+
+    .banner-header > .buchenBtn {
+        font-size: 11pt;
+        padding: 10px 12px;
+    }
     
     /*Information Geschichte*/
     .content > .title {
@@ -597,47 +570,48 @@ form button {
         font-size: 24pt;
         margin-bottom: 2px;
     }
-    
+
     /*Navigationsbalken*/
     .navbar {
         background: blue;
     }
 
-    .navbar .logo {
-        font-size: 10pt;
+    .navbar > .content > .logo {
+        font-size: 11pt;
     }
 
-    .navbar-links {
-
+    .navbar > .content > .item {
+        font-size: 12pt;
     }
 
-    .navbar-links > li {
-        font-size: 7pt;
-        padding: 4px;
-        margin: 14px 4px;
-    }
-
-
-    /*Banner*/
+    /*banner*/
     .banner > .banner-header {
+        padding: 4px;
+        margin: 0;
         position: absolute;
-        top: 0;
-        left: 0;
-        margin: 24px;
-        letter-spacing: .02em;
+        top: 16px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 80%;
+        color: var(--fgColorDark2);
     }
 
     .banner-header > .title {
-        font-size: 12pt;
-        margin-bottom: 4px;
-    }
-    
-    .banner-header > .content {
-        font-size: 7pt;
-        padding: 2px;
-        margin: 0;
+        font-size: 15pt;
+        margin-bottom: 2px;
     }
 
+    .banner > .banner-header > .content {
+        padding: 6px;
+        margin-bottom: 12px;
+        font-size: 10pt;
+        letter-spacing: .025em;
+    }
+
+    .banner-header > .buchenBtn {
+        font-size: 10pt;
+        padding: 8px 10px;
+    }
     
     /*Information Geschichte*/
     .content > .title {
@@ -694,8 +668,17 @@ form button {
         padding: 12px;
     }
 
+    .inklusive-section > .content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .inklusive-section > .content > div {
+        width: 100%;
+    }
+
     .hotel-item {
-        width: calc((100% / 1) - 5px);
+        width: calc((100% / 3) - 5px);
     }
 
     /*Anmeldeformular*/
@@ -721,6 +704,7 @@ form button {
     form button {
         padding: 10px;
         margin-top: 36px;
+        font-size: 10pt;
     }
     
     form .plz {
@@ -748,49 +732,49 @@ form button {
         font-size: 20pt;
         margin-bottom: 2px;
     }
-    
+
     /*Navigationsbalken*/
     .navbar {
         background: red;
     }
 
-    .navbar .logo {
-        font-size: 6pt;
+    .navbar > .content > .logo {
+        font-size: 9pt;
     }
 
-    .navbar-links {
-
+    .navbar > .content > .item {
+        font-size: 10pt;
     }
 
-
-    .navbar-links > li {
-        font-size: 6pt;
-        padding: 4px;
-        margin: 8px 4px;
-    }
-
-
-    /*Banner*/
+    /*banner*/
     .banner > .banner-header {
+        padding: 4px;
+        margin: 0;
         position: absolute;
-        top: 0;
-        left: 0;
-        margin: 16px;
-        letter-spacing: .01em;
-
+        top: 12px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 80%;
+        color: var(--fgColorDark2);
+        text-align: center;
     }
 
     .banner-header > .title {
-        font-size: 14px;
+        font-size: 13pt;
         margin-bottom: 2px;
     }
-    
-    .banner-header > .content {
-        font-size: 8px;
-        padding: 2px;
-        margin: 0;
+
+    .banner > .banner-header > .content {
+        padding: 6px;
+        margin-bottom: 0px;
+        font-size: 8pt;
+        letter-spacing: .02em;
     }
 
+    .banner-header > .buchenBtn {
+        font-size: 8pt;
+        padding: 6px 8px;
+    }
     
     /*Information Geschichte*/
     .content > .title {
@@ -847,9 +831,9 @@ form button {
         font-size: 12pt;
         padding: 10px;
     }
-
+ 
     .hotel-item {
-        width: calc((100% / 1) - 5px);
+        width: calc((100% / 3) - 5px);
     }
 
     /*Anmeldeformular*/
@@ -909,48 +893,48 @@ form button {
         background: purple;
     }
 
-    .navbar .logo {
-        font-size: 4pt;
+    .navbar > .content > .logo {
+        font-size: 7pt;
     }
 
-    .navbar-links {
-
+    .navbar > .content > .item {
+        font-size: 8pt;
     }
 
-
-    .navbar-links > li {
-        font-size: 4pt;
-        padding: 2px;
-        margin: 4px 0;
-    }
-
-
-    /*Banner*/
+    /*banner*/
     .banner > .banner-header {
+        padding: 2px;
+        margin: 0;
         position: absolute;
-        top: 0;
-        left: 0;
-        margin: 6px;
+        top: 6px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 90%;
+        color: var(--fgColorDark2);
+        text-align: center;
     }
 
     .banner-header > .title {
-        font-size: 6pt;
+        font-size: 11pt;
         margin-bottom: 2px;
-        border-bottom: 1px solid;
-    }
-    
-    .banner-header > .content {
-        font-size: 4pt;
-        padding: 2px;
-        margin: 0;
     }
 
+    .banner > .banner-header > .content {
+        padding: 6px;
+        margin-bottom: 0px;
+        font-size: 6pt;
+        letter-spacing: .025em;
+    }
+
+    .banner-header > .buchenBtn {
+        font-size: 6pt;
+        padding: 4px 6px;
+    }
     
     /*Information Geschichte*/
     .content > .title {
         font-size: 10pt;
     }
-
 
     .information > .content {
         margin: auto;
@@ -1004,7 +988,7 @@ form button {
     }
     
     .hotel-item {
-        width: calc((100% / 1) - 5px);
+        width: calc((100% / 2) - 5px);
     }
 
     /*Anmeldeformular*/

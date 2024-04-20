@@ -19,33 +19,32 @@
 
     <!--Navigationsbalken-->
     <header class="navbar">
-        <div class="content">
-            <div class="logo"><h1>Israelreisen</h1></div>
-            <ul class="navbar-links">
-                <li><a href="#überIsrael" class="link">Über Israel</a></li>
-                <li><a href="#gallerie" class="link">Gallerie</a></li>
-                <li><a href="#preise" class="link">Preise</a></li>
-                <li><a href="#formular" class="link">Formular</a></li>
-                <li><a href="#impressum" class="link">Impressum</a></li>
-            </ul>
-        </div>
+        <ul class="content">
+            <li class="logo"><h1>Israelreisen</h1></li>
+            <li class="item"><a href="#überIsrael" class="link">Über Israel</a></li>
+            <li class="item"><a href="#gallerie" class="link">Gallerie</a></li>
+            <li class="item"><a href="#preise" class="link">Preise</a></li>
+            <li class="item"><a href="#formular" class="link">Formular</a></li>
+            <li class="item"><a href="#impressum" class="link">Impressum</a></li>
+        </ul>
     </header>
-
 
     <!--Hauptseite-->
     <main>
+
         <!--Begruessung-->
         <article class="banner">
-            <video src="./banner.mp4" class="banner" autoplay muted loop>
+            <video src="./banner.mp4" class="banner-bg" autoplay muted loop>
                 <!--Wenn video nicht funktioniert-->
-                <img class="banner" src="https://www.nationsonline.org/gallery/Israel/Panorama-of-Jerusalem.jpg" alt="Jerusalem">
+                <img class="banner-bg" src="https://www.nationsonline.org/gallery/Israel/Panorama-of-Jerusalem.jpg" alt="Jerusalem">
             </video>
 
             <div class="banner-header">
-                <h1 class="title">Abwechslungsreiche Ferien?</h1>
+                <div class="title">Abwechslungsreiche Ferien?</div>
                 <p class="content">
                     Israel ist nicht nur das heilige Land, sondern zugleich auch atemberaubend schön. Spektakuläre Berglandschaften im Norden, magische Wüsten im Süden - und dazwischen? Dazwischen liegen zwei Städte, die unterschiedlicher kaum sein könnten und doch beide gleichermassen faszinierend sind: Jerusalem und Tel Aviv - die heilige und die sündige Stadt.
-                    <a class="buchenBtn" href="#preise">Jetzt Buchen!</a></p>
+                </p>
+                <a class="buchenBtn" href="#preise">Jetzt Buchen &#x2192;</a>
             </div>
         </article>
 
@@ -174,16 +173,16 @@
 
             <section class="content">
                 <form action="" method="get">
-                    <div class="name">
+                    <section class="name">
                         <div class="header">Personalien</div>
                         <label for="vorname">Vorname</label>
                         <input type="text" id="vorname" placeholder="Max" required>
 
                         <label for="nachname">Nachname</label>
                         <input type="text" id="nachname" placeholder="Mustermann">
-                    </div>
+                    </section>
     
-                    <div class="adresse">
+                    <section class="adresse">
                         <div class="header">Adresse</div>
 
                         <label for="adresse">Wohnadresse</label>
@@ -191,18 +190,18 @@
 
                         <label for="plz">PLZ</label>
                         <input type="text" id="plz" placeholder="1000" class="plz">
-                    </div>
+                    </section>
     
-                    <div class="kontakt">
+                    <section class="kontakt">
                         <div class="header">Kontakt</div>
                         <label for="phone">Telefon</label>
                         <input type="tel" id="phone" placeholder="+4199999" class="phone">
 
                         <label for="mail">Email</label>
                         <input type="email" id="mail" placeholder="max.mustermann@hotmail.com" class="mail" required>
-                    </div>
+                    </section>
 
-                    <div class="submit">
+                    <section class="submit">
                         <div class="law">
                             <label for="check">AGB</label>
                             <input type="checkbox" id="check" class="checkbox" required>
@@ -210,7 +209,7 @@
                         </div>
 
                         <button class="buchenBtn">Jetzt Buchen!</button>
-                    </div>
+                    </section>
                 </form>
             </section>
         </article>

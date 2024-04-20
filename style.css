@@ -1,0 +1,1063 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(120, 120, 120);
+    border-radius: 12px;
+    
+}
+
+:root {
+    --navbarBgColor: #303030;
+    --bodyColor: #252525;
+
+    --bgColorBright: #fff;
+    --fgColorBright1: #252525;
+    --fgColorBright2: #353535;
+    --fgColorBright3: #454545;
+
+    --bgColorDark: #252525;
+    --fgColorDark1: #fff;
+    --fgColorDark2: #cecece;
+    --fgColorDark3: #969696;
+}
+
+body {
+    background: var(--bodyColor);
+    overflow-x: hidden;
+}
+
+.dark {
+    color: var(--fgColorDark2);
+}
+
+.bright {
+    color: var(--fgColorBright1);
+}
+
+/*****Bilder Vorschau******/
+.img-preview {
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background: #8f8f8f8c;
+    backdrop-filter: grayscale(.5) blur(4px) brightness(.5);
+    display: none; /*JS*/
+}
+
+.img-preview > .close {
+    font-size: 48px;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    margin: 32px;
+    color: #fff;
+}
+
+.img-preview > img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/*Navigationsbalken Oben*/
+.navbar {
+    background: var(--navbarBgColor);
+    color: var(--fgColorDark2);
+
+}
+
+.navbar > .content {
+    width: 90%;
+    margin: auto;
+}
+
+.navbar .logo {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 16pt;
+}
+
+.navbar-links {
+    display: inline-block;
+    float: right;
+}
+
+.navbar-links > li {
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 14px;
+}
+
+.navbar-links > li > a {
+    text-decoration: none;
+    color: var(--foregroundColor);
+    border-bottom: 2px solid transparent;
+    transition: color 300ms ease-in-out, border 300ms ease-in-out;
+}
+
+.navbar-links > li > a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+
+/***Begruessung Artikel******/
+.banner {
+    position: relative;
+    background: var(--bgColorDark);
+}
+
+.banner > .banner {
+    width: 100%;
+    filter: brightness(.7);
+}
+
+.banner > .banner-header {
+    background: #35353594;
+    padding: 6px;
+    box-sizing: border-box;
+    letter-spacing: .075em;
+    backdrop-filter: blur(6px);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 64px;
+    max-width: 50%;
+    max-height: 70%;
+    color: var(--fgColorDark2);
+    box-shadow: 2px 2px 4px #4e4e4e;
+}
+
+.banner-header > .title {
+    margin-bottom: 8px;
+    border-bottom: 2px solid;
+    font-size: 18pt;
+    color: #fff;
+}
+
+.banner-header > .content {
+    font-size: 14pt;
+    padding: 6px;
+    box-sizing: border-box;
+}
+
+.banner-header > .content > .buchenBtn {
+    text-decoration: none;
+    color: #ddc030;
+    border-bottom: 2px solid;
+    padding: 2px;
+    margin: 6px;
+    text-wrap: nowrap;
+}
+
+
+
+
+
+/*Layout*/
+article > .header {
+    text-align: center;
+}
+
+article > .header > .title {
+    font-size: 32pt;
+    border-bottom: 2px solid;
+    display: inline-block;
+    margin: 12px 0;
+    padding: 4px;
+}
+
+article > .content {
+    width: 90%;
+    margin: auto;
+    padding: 32px 0;
+    box-sizing: border-box;
+    background: red;
+}
+
+/*Bright*/
+main article {
+    background: var(--bgColorBright);
+}
+
+.header .title {
+    color: var(--fgColorBright1);
+}
+
+/*Dark*/
+main article:nth-child(2n) {
+    background: var(--bgColorDark);
+    color: var(--fgColorDark2);
+}
+
+main article:nth-child(2n) .header .title {
+    color: var(--fgColorDark1);
+}
+
+
+
+
+
+
+
+/*******Information, Geschichte Artikel******/
+.information > .content > .title {
+    margin-bottom: 12px;
+    font-size: 18pt;
+}
+
+.content > .text {
+    letter-spacing: .075em;
+    line-height: 1.5em;
+    color: var(--fgColorDark3);
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+
+
+
+/*****Gallerie Artikel, Bilder Mueseum*******/
+.gallery > .content {
+    padding: 12px;
+}
+
+.gallery-list > .gallery-item {
+    width: calc((100% / 8) - 5px);
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 2px;
+    transition: transform 200ms ease-in-out;
+}
+
+.gallery-list > .gallery-item:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*****Preise Artikel, Kosten, Flug, Hotels********/
+.pricing > .content {
+    padding: 32px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.pricing .total {
+    background: #515151b0;
+    backdrop-filter: blur(4px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    font-size: 24px;
+    color: #ddc030;
+}
+
+.pricing .total .mehrwert {
+    color: var(--fgColorDark2);
+    font-size: 10px;
+}
+
+.flight-section {
+    padding: 0 12px;
+}
+
+.flight-section > .header {
+    margin-bottom: 12px;
+    border-bottom: 2px solid;
+    font-size: 20px;
+    color: var(--fgColorDark1);
+}
+
+.flight-section > .flight  {
+    margin: 14px 0;
+}
+
+.flight > .title {
+    padding: 4px 0;
+}
+
+.flight > input {
+    outline: none;
+    border: none;
+    padding: 6px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    background: #454545;
+    color: #cecece;
+    border: 3px solid transparent;
+    transition: border 300ms ease-in-out;
+}
+
+.flight > input:focus {
+    border: 3px solid #20efef;
+}
+
+.inklusive-section > .header {
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid;
+    color: var(--fgColorDark1);
+}
+
+.inklusive-section > .content {
+    padding: 6px;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 32px;
+}
+
+.inklusive-section > .content > div {
+    margin: 0 6px;
+    display: inline-block;
+    width: 50%;
+}
+
+.inklusive-section > .content > .description {
+    padding: 12px;
+    font-size: 14px;
+}
+
+.inklusive-section > .content > .gallery {
+}
+
+.inklusive-section > .content > .gallery > ul {
+    padding: 4px;
+}
+
+.hotel-item {
+    margin: 0 2px;
+    aspect-ratio: 1 / 1;
+    width: calc((100% / 3) - 5px);
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.hotel-item:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/*******Forumlar, Anmeldung*********/
+.formular {}
+
+.formular > .content {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+}
+
+.formular > .content > form > div {
+    margin: 16px 0;
+    padding: 0 12px;
+}
+
+form input {
+    outline: none;
+    border: 2px solid transparent;
+    background: #cecece;
+    color: #141414;
+    padding: 6px;
+    border-radius: 6px;
+    transition: border 300ms ease-in-out;
+}
+
+form input:focus {
+    border: 2px solid #20efef;
+}
+
+form .plz {
+    width: 50px;
+}
+
+form .phone {
+    width: 75px;
+    display: inline-block;
+}
+
+form > .submit {
+    padding: 12px;
+}
+
+form label {
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+form button {
+    outline: none;
+    border: none;
+    background: #ddc030;
+    color: #fbfbfb;
+    padding: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 48px;
+}
+
+.impressum > .content {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.foot > .copyright {
+    background: #141414;
+    color: var(--fgColorDark3);
+    margin-top: 32px;
+    padding: 12px;
+}
+
+
+/*1200*/
+@media screen and (max-width: 1200px) {
+
+    article > .header > .title {
+        font-size: 26pt;
+        margin-bottom: 2px;
+    }
+
+    /*Navigationsbalken*/
+    .navbar {
+        background: green;
+    }
+
+    .navbar .logo {
+        font-size: 11pt;
+    }
+
+    .navbar-links {
+
+    }
+
+    .navbar-links > li {
+        font-size: 12pt;
+        padding: 6px;
+
+        margin: 14px 8px;
+    }
+
+    /*Banner*/
+    .banner > .banner-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 28px;
+        letter-spacing: .02em;
+    }
+
+    .banner-header > .title {
+        font-size: 15pt;
+        margin-bottom: 4px;
+    }
+    
+    .banner-header > .content {
+        font-size: 11pt;
+        padding: 4px;
+        margin: 0;
+    }
+
+    
+    /*Information Geschichte*/
+    .content > .title {
+        font-size: 18pt;
+    }
+
+
+    .information > .content {
+        margin: auto;
+        width: 90%;
+        font-size: 11pt;
+    }
+
+
+    /*Gallerie, Bildermuseum*/
+    .gallery-list > .gallery-item {
+        width: calc((100% / 7) - 5px);
+
+    }
+
+
+    /*Preise*/
+    .pricing > .content {
+        padding: 24px;
+    }
+
+    .flight-section > .header {
+        margin-bottom: 10px;
+        font-size: 17pt;
+    }
+    
+    .flight > input {
+        width: 120px;
+        height: 45px;
+        padding: 12px;
+    }
+
+    .flight > .title {
+        font-size: 14pt;
+    }
+
+    .inklusive-section > .header {
+        font-size: 17pt;
+    }
+
+    .inklusive-section > .content > .description {
+        padding: 0 12px;
+        font-size: 11pt;
+    }
+
+    .pricing .total {
+        font-size: 17pt;
+        padding: 12px;
+    }
+
+    .hotel-item {
+        width: calc((100% / 2) - 5px);
+    }
+
+    /*Anmeldeformular*/
+    .formular > .content {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 16px;
+        padding-bottom: 6px;
+    }
+
+    form input {
+        max-width: 90px;
+        height: 18px;
+        padding: 6px;
+    }
+
+    
+    form label {
+        font-size: 12pt;
+        color: #4e4e4e;
+    }
+
+    form button {
+        padding: 10px;
+        margin-top: 36px;
+    }
+    
+    form .plz {
+        width: 40px;
+    }
+
+    form .phone {
+        width: 90px;
+    }
+
+    .impressum > .content {
+        font-size: 11pt;        
+    }
+    
+    .foot > .copyright {
+        margin-top: 20px;
+        font-size: 9pt;
+    }
+}
+
+/*750px*/
+@media screen and (max-width: 750px) {
+    
+    article > .header > .title {
+        font-size: 24pt;
+        margin-bottom: 2px;
+    }
+    
+    /*Navigationsbalken*/
+    .navbar {
+        background: blue;
+    }
+
+    .navbar .logo {
+        font-size: 10pt;
+    }
+
+    .navbar-links {
+
+    }
+
+    .navbar-links > li {
+        font-size: 7pt;
+        padding: 4px;
+        margin: 14px 4px;
+    }
+
+
+    /*Banner*/
+    .banner > .banner-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 24px;
+        letter-spacing: .02em;
+    }
+
+    .banner-header > .title {
+        font-size: 12pt;
+        margin-bottom: 4px;
+    }
+    
+    .banner-header > .content {
+        font-size: 7pt;
+        padding: 2px;
+        margin: 0;
+    }
+
+    
+    /*Information Geschichte*/
+    .content > .title {
+        font-size: 16pt;
+    }
+
+
+    .information > .content {
+        margin: auto;
+        width: 90%;
+        font-size: 10pt;
+    }
+
+
+
+    /*Gallerie, Bildermuseum*/
+    .gallery-list > .gallery-item {
+        width: calc((100% / 5) - 5px);
+    }
+
+
+    /*Preise*/
+    .pricing > .content {
+        padding: 24px;
+    }
+
+    .flight-section > .header {
+        margin-bottom: 10px;
+        font-size: 15pt;
+    }
+    
+    .flight > input {
+        width: 100px;
+        height: 25px;
+        padding: 2px;
+        font-size: 10pt;
+    }
+
+    .flight > .title {
+        font-size: 13pt;
+    }
+
+    .inklusive-section > .header {
+        font-size: 15pt;
+    }
+
+    .inklusive-section > .content > .description {
+        padding: 0 12px;
+        font-size: 10pt;
+    }
+
+    .pricing .total {
+        font-size: 15pt;
+        padding: 12px;
+    }
+
+    .hotel-item {
+        width: calc((100% / 1) - 5px);
+    }
+
+    /*Anmeldeformular*/
+    .formular > .content {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 16px;
+        padding-bottom: 6px;
+    }
+
+    form input {
+        max-width: 90px;
+        height: 18px;
+        padding: 6px;
+    }
+
+    
+    form label {
+        font-size: 11pt;
+        color: #4e4e4e;
+    }
+
+    form button {
+        padding: 10px;
+        margin-top: 36px;
+    }
+    
+    form .plz {
+        width: 40px;
+    }
+
+    form .phone {
+        width: 90px;
+    }
+
+    .impressum > .content {
+        font-size: 10pt;        
+    }
+    
+    .foot > .copyright {
+        margin-top: 16px;
+        font-size: 8pt;
+    }
+}
+
+/*520px*/
+@media screen and (max-width: 520px) {
+
+    article > .header > .title {
+        font-size: 20pt;
+        margin-bottom: 2px;
+    }
+    
+    /*Navigationsbalken*/
+    .navbar {
+        background: red;
+    }
+
+    .navbar .logo {
+        font-size: 6pt;
+    }
+
+    .navbar-links {
+
+    }
+
+
+    .navbar-links > li {
+        font-size: 6pt;
+        padding: 4px;
+        margin: 8px 4px;
+    }
+
+
+    /*Banner*/
+    .banner > .banner-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 16px;
+        letter-spacing: .01em;
+
+    }
+
+    .banner-header > .title {
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+    
+    .banner-header > .content {
+        font-size: 8px;
+        padding: 2px;
+        margin: 0;
+    }
+
+    
+    /*Information Geschichte*/
+    .content > .title {
+        font-size: 18px;
+    }
+
+
+    .information > .content {
+        margin: auto;
+        width: 90%;
+        font-size: 11px;
+    }
+
+
+
+    /*Gallerie, Bildermuseum*/
+
+    .gallery-list > .gallery-item {
+        width: calc((100% / 3) - 5px);
+    }
+
+
+    /*Preise*/
+    .pricing > .content {
+        padding: 20px;
+    }
+
+    .flight-section > .header {
+        margin-bottom: 6px;
+        font-size: 13pt;
+    }
+    
+    .flight > input {
+        width: 100px;
+        height: 25px;
+        padding: 4px;
+        font-size: 8pt;
+    }
+
+    .flight > .title {
+        font-size: 11pt;
+    }
+
+    .inklusive-section > .header {
+        font-size: 13pt;
+    }
+
+    .inklusive-section > .content > .description {
+        padding: 0 12px;
+        font-size: 8pt;
+    }
+
+    .pricing .total {
+        font-size: 12pt;
+        padding: 10px;
+    }
+
+    .hotel-item {
+        width: calc((100% / 1) - 5px);
+    }
+
+    /*Anmeldeformular*/
+    .formular > .content {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 16px;
+        padding-bottom: 6px;
+    }
+
+    form input {
+        max-width: 75px;
+        height: 10px;
+        padding: 6px;
+        border-radius: 6px;
+    }
+
+    
+    form label {
+        font-size: 9pt;
+        color: #4e4e4e;
+    }
+
+    form button {
+        padding: 7px;
+        margin-top: 32px;
+    }
+    
+    form .plz {
+        width: 35px;
+    }
+
+    form .phone {
+        width: 75px;
+        display: inline-block;
+    }
+
+    .impressum > .content {
+        font-size: 8pt;        
+    }
+    
+    .foot > .copyright {
+        margin-top: 16px;
+        font-size: 6pt;
+    }
+}
+
+/*430px*/
+@media screen and (max-width: 430px) {
+
+    article > .header > .title {
+        font-size: 18pt;
+    }
+    
+    /*Navigationsbalken*/
+    .navbar {
+        background: purple;
+    }
+
+    .navbar .logo {
+        font-size: 4pt;
+    }
+
+    .navbar-links {
+
+    }
+
+
+    .navbar-links > li {
+        font-size: 4pt;
+        padding: 2px;
+        margin: 4px 0;
+    }
+
+
+    /*Banner*/
+    .banner > .banner-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 6px;
+    }
+
+    .banner-header > .title {
+        font-size: 6pt;
+        margin-bottom: 2px;
+        border-bottom: 1px solid;
+    }
+    
+    .banner-header > .content {
+        font-size: 4pt;
+        padding: 2px;
+        margin: 0;
+    }
+
+    
+    /*Information Geschichte*/
+    .content > .title {
+        font-size: 10pt;
+    }
+
+
+    .information > .content {
+        margin: auto;
+        width: 90%;
+        font-size: 6pt;
+    }
+
+    /*Gallerie, Bildermuseum*/
+    .gallery-list > .gallery-item {
+        width: calc((100% / 2) - 5px);
+    }
+
+
+    /*Preise*/
+    .pricing > .content {
+        padding: 10px;
+    }
+
+    .flight-section > .header {
+        margin-bottom: 4px;
+        font-size: 10pt;
+    }
+    
+    .flight > input {
+        width: 80px;
+        height: 25px;
+        padding: 6px 0;
+        font-size: 6pt;
+    }
+
+    .flight > .title {
+        font-size: 9pt;
+    }
+
+    .inklusive-section > .header {
+        font-size: 10pt;
+    }
+
+    .inklusive-section > .content > .description {
+        padding: 0 12px;
+        font-size: 6pt;
+    }
+
+    .pricing .total {
+        font-size: 6pt;
+        padding: 5px;
+    }
+
+    .pricing .total .mehrwert {
+        font-size: 4pt;
+    }
+    
+    .hotel-item {
+        width: calc((100% / 1) - 5px);
+    }
+
+    /*Anmeldeformular*/
+    .formular > .content {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 16px;
+        padding-bottom: 6px;
+    }
+
+    form input {
+        max-width: 50px;
+        height: 5px;
+        padding: 6px;
+        border-radius: 6px;
+        font-size: 6pt;
+    }
+
+    form .checkbox {
+        width: 10px;
+        height: 10px;
+    }
+    
+    form label {
+        font-size: 8pt;
+        color: #4e4e4e;
+    }
+
+    form .law .agb {
+        font-size: 6pt;
+    }
+
+    form button {
+        padding: 7px;
+        margin-top: 32px;
+        font-size: 8pt;
+    }
+    
+    form .plz {
+        width: 20px;
+    }
+
+    form .phone {
+        width: 60px;
+        display: inline-block;
+    }
+
+    .impressum > .content {
+        font-size: 6pt;        
+    }
+    
+    .foot > .copyright {
+        margin-top: 16px;
+        font-size: 4pt;
+    }
+}

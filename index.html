@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webseite zum Buchen für spannende und abenteurreiche Erlebnise im Land Israel!">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Israelreisen</title>
+</head>
+
+<body>
+    <!--Bilderbetrachtungsfenster-->
+    <div class="img-preview" id="preview">
+        <div class="close" id="closeBtn">&times;</div>
+        <img id="previewImg" src="https://www.camelsandchocolate.com/wp-content/uploads/2010/01/Negev-Desert-Israel.jpg" alt="vorschau">
+    </div>
+
+    <!--Navigationsbalken-->
+    <header class="navbar">
+        <div class="content">
+            <div class="logo"><h1>Israelreisen</h1></div>
+            <ul class="navbar-links">
+                <li><a href="#überIsrael" class="link">Über Israel</a></li>
+                <li><a href="#gallerie" class="link">Gallerie</a></li>
+                <li><a href="#preise" class="link">Preise</a></li>
+                <li><a href="#formular" class="link">Formular</a></li>
+                <li><a href="#impressum" class="link">Impressum</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!--Hauptseite-->
+    <main>
+        <!--Begruessung-->
+        <article class="banner">
+            <video src="./banner.mp4" class="banner" autoplay muted loop>
+                <!--Wenn video nicht funktioniert-->
+                <img class="banner" src="https://www.nationsonline.org/gallery/Israel/Panorama-of-Jerusalem.jpg" alt="Jerusalem">
+            </video>
+
+            <div class="banner-header">
+                <h1 class="title">Abwechslungsreiche Ferien?</h1>
+                <p class="content">
+                    Israel ist nicht nur das heilige Land, sondern zugleich auch atemberaubend schön. Spektakuläre Berglandschaften im Norden, magische Wüsten im Süden - und dazwischen? Dazwischen liegen zwei Städte, die unterschiedlicher kaum sein könnten und doch beide gleichermassen faszinierend sind: Jerusalem und Tel Aviv - die heilige und die sündige Stadt.
+                    <a class="buchenBtn" href="#preise">Jetzt Buchen!</a></p>
+            </div>
+        </article>
+
+        <!--Informationen, Geschichte-->
+        <article class="information" id="überIsrael">
+            <section class="header">
+                <div class="title">Israel</div>
+            </section>
+
+            <section class="content">
+                <h2 class="title">Die faszinierende Welt Israels: Geschichte, Kulinarik und Naturwunder</h2>
+                <p class="text">
+                    Israel ist ein faszinierendes Land, das reich an Geschichte, Kultur und landschaftlicher Vielfalt ist. Von den alten Ruinen in Jerusalem bis zu den modernen Hochhäusern in Tel Aviv bietet Israel eine Mischung aus Alt und Neu, die Besucher aus der ganzen Welt anzieht.
+                    Die historische Stadt Jerusalem ist das Herzstück des Landes und ein heiliger Ort für die drei großen monotheistischen Religionen: Judentum, Christentum und Islam. Die Altstadt von Jerusalem beherbergt religiöse Stätten wie die Klagemauer, die Grabeskirche und den Felsendom, die jedes Jahr Millionen von Pilgern und Touristen anziehen.
+                    Entlang der Küste des Mittelmeers liegt die lebendige Metropole Tel Aviv, bekannt für ihre pulsierende Kultur, ihr aufregendes Nachtleben und ihre atemberaubenden Strände. Hier treffen alte Traditionen auf moderne Innovationen, und die Besucher können in den Straßencafés sitzen, die kosmopolitische Atmosphäre genießen und das lebendige Stadtleben erleben.
+                    Abseits der Städte bietet Israel eine beeindruckende Naturkulisse, die vom Jordan-Tal über die Wüste Negev bis zum See Genezareth reicht. Wanderer und Naturliebhaber können die malerischen Landschaften erkunden, die von historischen Stätten, atemberaubenden Aussichtspunkten und einer vielfältigen Tierwelt geprägt sind.
+                    Die reiche Kultur Israels spiegelt sich auch in seiner vielfältigen Küche wider, die von köstlichen Falafel und Hummus bis zu traditionellen Gerichten wie Shakshuka und Sabich reicht. Die fusionierte Küche Israels ist ein Spiegelbild der verschiedenen Einflüsse aus der ganzen Welt und bietet den Besuchern eine kulinarische Reise durch die Geschichte und die Geschmäcker des Landes.
+                    Insgesamt ist Israel ein Land voller Kontraste und Überraschungen, das jeden Besucher mit seiner Schönheit, seiner Vielfalt und seinem kulturellen Reichtum verzaubert.
+                </p>
+            </section>
+        </article>
+
+        <!--Bilder Gallerie-->
+        <article class="gallery" id="gallerie">
+            <section class="header">
+                <div class="title">Gallerie</div>
+            </section>
+
+            <section class="content">
+                <ul class="gallery-list" id="gallery">
+                    <!--Js-Leer-->
+                </ul>
+            </section>
+        </article>
+
+        <!--Preise und Kosten-->
+        <article class="pricing" id="preise">
+            <section class="header">
+                <div class="title">Preise</div>
+            </section>
+
+            <section class="content">
+                <section class="flight-section">
+                    <div class="header">Flugdatum</div>
+
+                    <section class="departure flight">
+                        <div class="title">Abflug</div>
+                        <input type="date">
+                    </section>
+
+                    <section class="arrival flight">
+                        <div class="title">Rückflug</div>
+                        <input type="date">
+                    </section>
+                </section>
+
+                <section class="inklusive-section">
+                    <div class="header">Inklusive</div>
+
+                    <section class="content">
+                        <div class="description">
+                            <ol class="hotels">
+                                <li>
+                                    <strong>Hotelname: Sonnenschein-Resort</strong><br>
+                                    Ort: Tel Aviv,
+                                    Zimmeranzahl: 150,
+                                    Sternebewertung: 4 Sterne,
+                                    Einrichtungen: Pool, Fitnesscenter, kostenloses WLAN, Restaurant, Bar,
+                                    <i>Durchschnittlicher Zimmerpreis pro Nacht: $150  </i>
+                                </li>
+                                <li>
+                                    <strong>Hotelname: Küstenblick-Hotel</strong><br>
+                                    Ort: Haifa,
+                                    Zimmeranzahl: 80,
+                                    Sternebewertung: 3 Sterne,
+                                    Einrichtungen: Kostenloses Frühstück, Parkplatz, Tagungsräume, Lobbybar,
+                                    <i>Durchschnittlicher Zimmerpreis pro Nacht: $100</i>         
+                                </li>
+                                <li>
+                                    <strong>Hotelname: Wüstenoase-Resort</strong><br>
+                                    Ort: Eilat,
+                                    Zimmeranzahl: 200,
+                                    Sternebewertung: 5 Sterne,
+                                    Einrichtungen: Privatstrand, Spa, Tennisplätze, Kinderclub, mehrere Restaurants,
+                                    <i>Durchschnittlicher Zimmerpreis pro Nacht: $250</i> 
+                                </li>
+                                <li>
+                                    <strong>Hotelname: Historisches Jerusalem-Hotel</strong><br>
+                                    Ort: Jerusalem,
+                                    Zimmeranzahl: 120,
+                                    Sternebewertung: 4 Sterne,
+                                    Einrichtungen: Blick auf die Altstadt, kostenlose Stadtführungen, Pool, Restaurant,
+                                    <i>Durchschnittlicher Zimmerpreis pro Nacht: $180</i>
+                                </li>
+                                <li>
+                                    <strong>Zusätzlich: Mietwagen</strong><br>Fahrzeugtyp: SUV,
+                                    Modell: Hyundai Tucson,
+                                    Baujahr: 2023,
+                                    Kraftstoffart: Diesel,
+                                    <i>Tagesmietpreis: $60,
+                                    Zusatzoptionen: Vollkaskoversicherung ($15/Tag), WLAN-Hotspot ($7/Tag)</i>
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div class="gallery">
+                            <ul id="hotels">
+                                <!--Js Here-->
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+
+                <div class="total">
+                    <strong>Kosten Total:</s<trong> 1850CHF/Person
+                        <span class="mehrwert">Inkl. Mehrwertsteuer</span>
+                    </div>
+            </section>
+        </article>
+
+        <!--Anmeldeformular-->
+        <article class="formular" id="formular">
+            <section class="header">
+                <div class="title">Formular</div>
+            </section>
+
+            <section class="content">
+                <form action="" method="get">
+                    <div class="name">
+                        <div class="header">Personalien</div>
+                        <label for="vorname">Vorname</label>
+                        <input type="text" id="vorname" placeholder="Max" required>
+
+                        <label for="nachname">Nachname</label>
+                        <input type="text" id="nachname" placeholder="Mustermann">
+                    </div>
+    
+                    <div class="adresse">
+                        <div class="header">Adresse</div>
+
+                        <label for="adresse">Wohnadresse</label>
+                        <input type="text" id="adresse" placeholder="Musterstrasse 15">
+
+                        <label for="plz">PLZ</label>
+                        <input type="text" id="plz" placeholder="1000" class="plz">
+                    </div>
+    
+                    <div class="kontakt">
+                        <div class="header">Kontakt</div>
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" placeholder="+4199999" class="phone">
+
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" placeholder="max.mustermann@hotmail.com" class="mail" required>
+                    </div>
+
+                    <div class="submit">
+                        <div class="law">
+                            <label for="check">AGB</label>
+                            <input type="checkbox" id="check" class="checkbox" required>
+                            <span class="agb">Ich habe die AGB gelesen und Israelreisen darf meine Daten benutzen um mich zu kontaktieren!</span>
+                        </div>
+
+                        <button class="buchenBtn">Jetzt Buchen!</button>
+                    </div>
+                </form>
+            </section>
+        </article>
+
+        <!--Impressum-->
+        <article class="impressum" id="impressum">
+            <section class="header">
+                <div class="title">Impressum</div>
+            </section>
+
+            <section class="content">
+                <span>Israelreisen GmbH &copy;<br>
+                Musterstrasse 51 <br>
+                9500 Wil <br>
+                Schweiz <br>
+                <br>
+                Telefonnr: +41 555 22 11 <br>
+                Fax: +972(3)546 6407 <br>
+                E-Mail Adresse: nikollbibaj.noah@bene-edu.ch <br>
+                Entwickler: Noah Nikollbibaj <br>
+                M293 - ZH ITB1c
+                </span>
+            </section>
+        </article>
+    </main>
+
+    <footer class="foot">
+        <div class="copyright">&copy; Israelreisen GmbH &copy; Noah Nikollbibaj &copy; M293 - ZH ITB1c</div>
+    </footer>
+
+    <!--Javascript-->
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -339,7 +339,8 @@ article:nth-child(2n) .header .title {
 }
 
 form section {
-    display: inline-block;
+    display: block;
+    margin: 12px;
 }
 
 form input {

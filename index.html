@@ -175,30 +175,54 @@
                 <form action="" method="get">
                     <section class="name">
                         <div class="header">Personalien</div>
-                        <label for="vorname">Vorname</label>
-                        <input type="text" id="vorname" placeholder="Max" required>
-
-                        <label for="nachname">Nachname</label>
+                        
+                        <section>
+                            <label for="vorname">Vorname</label>
+                            <input type="text" id="vorname" placeholder="Max" required>
+                        </section>
+                        
+                        <section>
+                            <label for="nachname">Nachname</label>
                         <input type="text" id="nachname" placeholder="Mustermann">
+                        </section>
                     </section>
     
                     <section class="adresse">
                         <div class="header">Adresse</div>
 
-                        <label for="adresse">Wohnadresse</label>
-                        <input type="text" id="adresse" placeholder="Musterstrasse 15">
+                        <section>
+                            <label for="adresse">Wohnadresse</label>
+                            <input type="text" id="adresse" placeholder="Musterstrasse 15">
+                        </section>
+                        
+                        <section>
+                            <label for="plz">PLZ</label>
+                            <input type="text" id="plz" placeholder="1000" class="plz">
+                        </section>
 
-                        <label for="plz">PLZ</label>
-                        <input type="text" id="plz" placeholder="1000" class="plz">
+                        <section>
+                            <label for="country">Land</label>
+                            <select name="country" id="country">
+                                <option value="ch">Schweiz</option>
+                                <option value="d">Deutschland</option>
+                                <option value="au">Österreich</option>
+                                <option value="fl">Fürstentum Lichtenstein</option>
+                            </select>
+                        </section>
                     </section>
     
                     <section class="kontakt">
                         <div class="header">Kontakt</div>
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" placeholder="+4199999" class="phone">
-
-                        <label for="mail">Email</label>
-                        <input type="email" id="mail" placeholder="max.mustermann@hotmail.com" class="mail" required>
+                        
+                        <section>
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" placeholder="+4199999" class="phone">
+                        </section>
+                        
+                        <section>
+                            <label for="mail">Email</label>
+                            <input type="email" id="mail" placeholder="max.mustermann@hotmail.com" class="mail" required>
+                        </section>
                     </section>
 
                     <section class="submit">

@@ -338,6 +338,10 @@ article:nth-child(2n) .header .title {
     margin-bottom: 6px;
 }
 
+form section {
+    display: inline-block;
+}
+
 form input {
     outline: none;
     border: 2px solid transparent;
@@ -362,7 +366,7 @@ form .phone {
     display: inline-block;
 }
 
-form > .submit {
+form  .submit {
     padding: 12px;
 }
 
@@ -382,6 +386,22 @@ form button {
     font-size: 14pt;
     margin-top: 48px;
     transition: 200ms background ease-in-out, 200ms color ease-in-out;
+}
+
+form select {
+    outline: none;
+    border: none;
+    background: #cecece;
+    border: 2px solid transparent;
+    color: #141414;
+    padding: 6px;
+    border-radius: 6px;
+    transition: border 300ms ease-in-out;
+    margin: 0 12px;
+}
+
+form select:focus {
+    border: 2px solid #20efef;
 }
 
 form button:hover {
@@ -414,10 +434,6 @@ form .agb {
     }
 
     /*Navigationsbalken*/
-    .navbar {
-        background: green;
-    }
-
     .navbar > .content > li {
         display: block;
         text-align: center;
@@ -533,7 +549,6 @@ form .agb {
         height: 18px;
         padding: 6px;
     }
-
     
     form label {
         font-size: 12pt;
@@ -572,10 +587,6 @@ form .agb {
     }
 
     /*Navigationsbalken*/
-    .navbar {
-        background: blue;
-    }
-
     .navbar > .content > .logo {
         font-size: 11pt;
     }
@@ -695,6 +706,10 @@ form .agb {
         padding: 6px;
     }
 
+    form select {
+        max-width: 90px;
+        padding: 6px;
+    }
     
     form label {
         font-size: 11pt;
@@ -734,10 +749,6 @@ form .agb {
     }
 
     /*Navigationsbalken*/
-    .navbar {
-        background: red;
-    }
-
     .navbar > .content > .logo {
         font-size: 9pt;
     }
@@ -848,9 +859,13 @@ form .agb {
         max-width: 75px;
         height: 10px;
         padding: 6px;
-        border-radius: 6px;
     }
 
+    form select {
+        max-width: 75px;
+        padding: 2px;
+        font-size: 9pt;
+    }
     
     form label {
         font-size: 9pt;
@@ -889,10 +904,6 @@ form .agb {
     }
     
     /*Navigationsbalken*/
-    .navbar {
-        background: purple;
-    }
-
     .navbar > .content > .logo {
         font-size: 7pt;
     }
@@ -1004,6 +1015,11 @@ form .agb {
         height: 5px;
         padding: 6px;
         border-radius: 6px;
+        font-size: 6pt;
+    }
+
+    form select {
+        max-width: 50px;
         font-size: 6pt;
     }
 

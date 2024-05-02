@@ -73,7 +73,20 @@ body {
 .navbar {
     background: var(--navbarBgColor);
     color: var(--fgColorDark2);
+}
 
+.navbar .logo {
+}
+
+.navbar .logo h1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.navbar .logo img {
+    height: 32pt;
+    vertical-align: middle;
+    margin: 0 6px;
 }
 
 .navbar > .content {
@@ -313,6 +326,12 @@ article:nth-child(2n) .header .title {
 .inklusive-section > .content > .description {
     padding: 0 8px;
     font-size: 11pt;
+}
+
+.inklusive-section .hotels li {
+    margin-bottom: 4px;
+    padding: 4px;
+    box-sizing: border-box;
 }
 
 .hotel-item {
@@ -924,6 +943,10 @@ form .agb {
 
     .navbar > .content > .item {
         font-size: 8pt;
+    }
+
+    .navbar .logo img {
+        height: 20pt;
     }
 
     /*banner*/

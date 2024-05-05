@@ -444,6 +444,11 @@ form .agb {
     margin: 12px 0;
 }
 
+.impressum > .content .map iframe {
+    width: 500px;
+    height: 350px;
+}
+
 .foot > .copyright {
     background: #141414;
     color: var(--fgColorDark3);
@@ -932,6 +937,11 @@ form .agb {
         margin-top: 16px;
         font-size: 6pt;
     }
+
+    .impressum > .content .map iframe {
+        width: 350px;
+        height: 200px;
+    }
 }
 
 /*430px*/
@@ -1106,5 +1116,10 @@ form .agb {
     .foot > .copyright {
         margin-top: 16px;
         font-size: 4pt;
+    }
+
+    .impressum > .content .map iframe {
+        width: 150px;
+        height: 150px;
     }
 }

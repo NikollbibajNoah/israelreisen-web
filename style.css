@@ -437,6 +437,11 @@ form .agb {
 .impressum > .content {
     padding: 12px;
     box-sizing: border-box;
+    
+}
+
+.impressum > .content .map {
+    margin: 12px 0;
 }
 
 .foot > .copyright {
